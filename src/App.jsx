@@ -1,14 +1,18 @@
 import './App.css'
+import Filters from './components/Filters'
 
-function App() {
+export default function App() {
 
   return (
-    <div>
-      <h1>
-        Ricky and Morty Project :D
-      </h1>
-    </div>
-  )
-}
+    <div className='App'>
+      <nav>
+        <h1 className='font-bold text-4xl text-center'>Ricky & Morty<span className='text-blue-400'> Wiki</span></h1>
+      </nav>
 
-export default App
+      <div className='flex flex-row'>
+        <div className='grid grid-cols-3'><Filters /></div>
+        <div className='grid grid-cols-8'></div>
+      </div>
+    </div>
+  ) 
+}
