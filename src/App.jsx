@@ -10,7 +10,7 @@ export default function App() {
       </nav>
 
       <div className='flex flex-row'>
-        <div className='grid grid-cols-3'><Filters /></div>
+        <div className='grid grid-cols-3 h-40 w-40'><Filters /></div>
         <div className='grid grid-cols-8'></div>
       </div>
     </div>

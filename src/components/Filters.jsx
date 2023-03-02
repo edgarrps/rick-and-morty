@@ -1,6 +1,6 @@
 export default function Filters () {
 
 return(
-<p>Filtros</p>
+<p className='m-20'>Filtros</p>
 )
 }
