@@ -11,8 +11,8 @@ export default function Wiki() {
   const { info, results } = chars
 
   return (
-    <div className='bg-cyan-700'>
-      <nav className='w-screen xl:text-4xl h-[50px] fixed bg-cyan-500 font-bold text-4xl text-center text-white shadow-xl'>
+    <div className='bg-cyan-700 w-screen h-full'>
+      <nav className='w-screen xl:text-4xl h-[50px] fixed z-50 bg-cyan-500 font-bold text-4xl text-center text-white shadow-xl'>
         Rick and Morty<span className='text-blue-700'> Wiki</span>
       </nav>
 
@@ -21,7 +21,7 @@ export default function Wiki() {
         <div className='container'>
           <div className='row'>
             <div className='col-3'><Filters /></div>
-            <div className='grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols place-items-center'>
+            <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
               <Cards results={results} />
             </div>
           </div>
