@@ -3,7 +3,6 @@ import Cards from '../components/Cards'
 import Filters from '../components/Filters'
 import Api from '../services/Api.jsx'
 
-
 export default function Wiki() {
   const api = 'https://rickandmortyapi.com/api'
   const [pageNumber, setPageNumber] = useState(1)
@@ -11,9 +10,9 @@ export default function Wiki() {
   const { info, results } = chars
 
   return (
-    <div className='bg-cyan-700 w-screen h-full'>
-      <nav className='w-screen xl:text-4xl h-[50px] fixed z-50 bg-cyan-500 font-bold text-4xl text-center text-white shadow-xl'>
-        Rick and Morty<span className='text-blue-700'> Wiki</span>
+    <div className='bg-cyan-900'>
+      <nav className='w-screen h-[50px] fixed z-50 bg-cyan-500 shadow-xl'>
+      <h1 className='font-bold text-3xl text-center text-white sm:place-self-center'>Rick and Morty<span className='text-blue-700'> Wiki</span></h1>
       </nav>
 
       <div>
