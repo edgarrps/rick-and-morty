@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Cards from '../components/Cards'
 import Filters from '../components/Filters'
+import Search from '../components/Search'
 import Api from '../services/Api.jsx'
 
 export default function Wiki() {
@@ -17,6 +18,7 @@ export default function Wiki() {
 
       <div>
         <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} chars={chars} setChars={setChars} />
+        <Search />
         <div className='container'>
           <div className='row'>
             <div className='col-3'><Filters /></div>

@@ -18,7 +18,6 @@ export default function Cards({ results }) {
                         <div className='relative bg-gray-700 rounded-r-full pl-2 pt-1'>
                             <p className={`font-bold text-red-300 pt-11 ${name.length > 20 ? 'text-pq pt-13 pl-3' : 'text-md pl-2'}`}>{name}</p>
                             <p className='text-xs pt-1 pl-1 text-white'><strong>&#127757;:</strong> {origin.name}</p>
-
                         </div>
                     </div>
                 </div>
