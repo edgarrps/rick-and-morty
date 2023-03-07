@@ -7,6 +7,7 @@ import Api from '../services/Api.jsx'
 export default function Wiki() {
   const api = 'https://rickandmortyapi.com/api'
   const [pageNumber, setPageNumber] = useState(1)
+  const [search, setSearch] = useState('')
   const [chars, setChars] = useState([])
   const { info, results } = chars
 
@@ -17,7 +18,7 @@ export default function Wiki() {
       </nav>
 
       <div>
-        <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} chars={chars} setChars={setChars} />
+        <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} search={search} setSearch={setSearch} chars={chars} setChars={setChars} />
         <div className='container'>
           <Search />
           <div className='row'>
