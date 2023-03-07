@@ -19,7 +19,7 @@ export default function Wiki() {
       <div>
         <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} chars={chars} setChars={setChars} />
         <div className='container'>
-        <Search />
+          <Search />
           <div className='row'>
             <div><Filters /></div>
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
