@@ -5,7 +5,10 @@ export default function Cards({ results }) {
         const statusPtBr = (status === 'Alive' && gender === 'Female') ? 'Viva' :
             (status === 'Alive' && gender === 'Male') ? 'Vivo' :
                 (status === 'Dead' && gender === 'Female') ? 'Morta' :
-                    (status === 'Dead' && gender === 'Male') ? 'Morto' : 'Desconhecido'
+                    (status === 'Dead' && gender === 'Male') ? 'Morto' :
+                        (status === 'Alive' && gender === 'unknown') ? 'Vive' :
+                            (status === 'Dead' && gender === 'unknown') ? 'Morte' :
+                                'Desconhecido'
 
         return (
             <div key={id}>
