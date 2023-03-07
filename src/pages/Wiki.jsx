@@ -19,7 +19,7 @@ export default function Wiki() {
       </nav>
 
       <div>
-        <Api api={api} search={search} chars={chars} setChars={setChars} />
+        <Api api={api} pageNumber={pageNumber} search={search} chars={chars} setChars={setChars} />
         <div className='container'>
           <Search setSearch={setSearch}/>
           <div className='row'>
@@ -27,7 +27,7 @@ export default function Wiki() {
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
               <Cards results={results} />
             </div>
-            <Pagination setPageNumber={setPageNumber}/>
+            <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
           </div>
         </div>
       </div>

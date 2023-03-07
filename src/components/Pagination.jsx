@@ -1,9 +1,14 @@
-export default function Pagination(props) {
+export default function Pagination({ pageNumber, setPageNumber }) {
+
+    let prev = () => setPageNumber(value => value - 1)
+    let next = () => setPageNumber(value => value + 1)
+
+
 
     return (
-        <div className='container p-10 text-center'>
-        <button className='rounded pl-2 pr-2 bg-blue-300'>Voltar</button>
-        <button className='rounded pl-2 pr-2 bg-blue-300'>Próx.</button>
+        <div className='flex p-10 text-center justify-evenly'>
+            <button disabled={pageNumber === 1} onClick={prev} className='disabled:bg-stone-300 disabled:text-stone-400 rounded pl-2 pr-2 bg-cyan-600 text-white font-bold'>Voltar</button>
+            <button onClick={next} className='rounded pl-3 pr-3 bg-cyan-600 text-white font-bold'>Próx.</button>
         </div>
     )
 }
