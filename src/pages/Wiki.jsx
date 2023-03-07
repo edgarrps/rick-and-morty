@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Cards from '../components/Cards'
 import Filters from '../components/Filters'
+import Pagination from '../components/Pagination'
 import Search from '../components/Search'
 import Api from '../services/Api.jsx'
 
@@ -18,7 +19,7 @@ export default function Wiki() {
       </nav>
 
       <div>
-        <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} search={search} chars={chars} setChars={setChars} />
+        <Api api={api} search={search} chars={chars} setChars={setChars} />
         <div className='container'>
           <Search setSearch={setSearch}/>
           <div className='row'>
@@ -26,6 +27,7 @@ export default function Wiki() {
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
               <Cards results={results} />
             </div>
+            <Pagination setPageNumber={setPageNumber}/>
           </div>
         </div>
       </div>
