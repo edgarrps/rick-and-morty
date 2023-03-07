@@ -12,15 +12,15 @@ export default function Wiki() {
   const { info, results } = chars
 
   return (
-    <div className='bg-cyan-900'>
+    <div>
       <nav className='w-screen h-[50px] fixed z-50 bg-cyan-500 shadow-xl'>
         <h1 className='font-bold text-3xl text-center text-white sm:place-self-center'>Rick and Morty<span className='text-blue-700'> Wiki</span></h1>
       </nav>
 
       <div>
-        <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} search={search} setSearch={setSearch} chars={chars} setChars={setChars} />
+        <Api api={api} pageNumber={pageNumber} setPageNumber={setPageNumber} search={search} chars={chars} setChars={setChars} />
         <div className='container'>
-          <Search />
+          <Search setSearch={setSearch}/>
           <div className='row'>
             <div><Filters /></div>
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
