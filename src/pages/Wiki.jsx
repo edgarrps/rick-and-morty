@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Cards from '../components/Cards'
-import Filters from '../components/Filters'
+// import Filters from '../components/Filters'
 import Pagination from '../components/Pagination'
 import Search from '../components/Search'
 import Api from '../services/Api.jsx'
@@ -18,12 +18,12 @@ export default function Wiki() {
         <h1 className='font-bold text-3xl text-center text-white sm:place-self-center'>Rick and Morty<span className='text-blue-700'> Wiki</span></h1>
       </nav>
 
-      <div>
+      <div className='flex justify-center'>
         <Api api={api} pageNumber={pageNumber} search={search} chars={chars} setChars={setChars} />
         <div className='container'>
           <Search setSearch={setSearch}/>
           <div className='row'>
-            {/* <div><Filters /></div> */}
+            {/* <Filters /> */}
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center pt-10'>
               <Cards results={results} />
             </div>

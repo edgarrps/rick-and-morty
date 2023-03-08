@@ -18,5 +18,5 @@ module.exports = {
       '5xl': '3.052rem',
     }
   },
-  plugins: [require('tailwind-bootstrap-grid')()],
+  plugins: [],
 }
