@@ -23,11 +23,11 @@ export default function Wiki() {
         <div className='container'>
           <Search setSearch={setSearch}/>
           <div className='row'>
-            <div><Filters /></div>
-            <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center'>
+            {/* <div><Filters /></div> */}
+            <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center pt-10'>
               <Cards results={results} />
             </div>
-            <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+            <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
           </div>
         </div>
       </div>

@@ -1,14 +1,9 @@
-export default function Pagination({ pageNumber, setPageNumber }) {
-
-    let prev = () => setPageNumber(value => value - 1)
-    let next = () => setPageNumber(value => value + 1)
-
-
+import ReactPaginate from 'react-paginate'
+export default function Pagination({ info, pageNumber, setPageNumber }) {
 
     return (
-        <div className='flex p-10 text-center justify-evenly'>
-            <button disabled={pageNumber === 1} onClick={prev} className='disabled:bg-stone-300 disabled:text-stone-400 rounded pl-2 pr-2 bg-cyan-600 text-white font-bold'>Voltar</button>
-            <button onClick={next} className='rounded pl-3 pr-3 bg-cyan-600 text-white font-bold'>Próx.</button>
+        <div className='flex justify-center pt-5 pb-20'>
+            <ReactPaginate className='inline-flex items-center space-x-6' disabledClassName='hover:shadow-2xl hover:scale-105 pl-1 pr-1 text-center text-stone-300 font-bold rounded bg-stone-400' previousClassName='hover:shadow-2xl hover:scale-105 pl-1 pr-1 text-center text-white font-bold rounded bg-cyan-400' nextClassName='hover:shadow-2xl hover:scale-105 pl-1 pr-1 text-center text-white font-bold rounded bg-cyan-400' breakClassName='hover:shadow-2xl hover:scale-105 text-center w-[26px] h-[24px] space-between text-white font-bold rounded bg-cyan-600' previousLabel={'Voltar'} nextLabel={'Avançar'} pageClassName='hover:shadow-2xl hover:scale-105 text-center w-[26px] h-[24px] space-between text-white font-bold rounded bg-cyan-400' activeClassName='hover:shadow-2xl hover:scale-105 text-center w-[26px] h-[24px] space-between text-white font-bold rounded bg-green-400' onPageChange={(value) => setPageNumber(value.selected + 1)} pageCount={info?.pages} />
         </div>
     )
 }
