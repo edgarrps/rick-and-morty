@@ -18,9 +18,5 @@ module.exports = {
       '5xl': '3.052rem',
     }
   },
-  plugins: [
-    require('tailwind-bootstrap-grid')({
-      containerMaxWidths: { sm: '540px', md: '720px', lg: '960px', xl: '1140px' },
-    }),
-  ],
+  plugins: [],
 }
