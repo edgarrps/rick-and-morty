@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 export default function Card(props) {
     const statusPtBr =
         (props.status === 'Alive' && props.gender === 'Female') ? 'Viva' :
