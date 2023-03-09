@@ -19,7 +19,7 @@ export default function Card(props) {
                 <img src={props.image} />
                 <div className='text-center p-2 text-white text-xl font-bold'>
                     <p className='p-1'>Estado: <span className=''>{statusPtBr}</span></p>
-                    <p className='p-1'>Local: <span className=''>{props.origin?.name}</span></p>
+                    <p className='p-1'>Local: <span className=''>{props.origin?.name === 'unknown' ? 'Desconhecido' : props.origin?.name}</span></p>
                     <p className='p-1'>Espécie: <span className=''>{props.species}</span></p>
                 </div>
         </div>

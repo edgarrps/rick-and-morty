@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export default function Cards({ results, pageNumber }) {
+export default function Cards({ results }) {
     let display
     results ? display = results.map(result => {
     const { id, name, image, gender, origin, status } = result

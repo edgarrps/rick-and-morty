@@ -25,9 +25,9 @@ export default function Wiki() {
           <div className='row'>
             {/* <Filters /> */}
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center pt-10'>
-              <Cards page='/' pageNumber={pageNumber} results={results} />
+              <Cards page='/' results={results} />
             </div>
-            <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
+            <Pagination info={info} setPageNumber={setPageNumber}/>
           </div>
         </div>
       </div>
