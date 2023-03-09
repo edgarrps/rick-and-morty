@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Wiki from './pages/Wiki'
+import RoutesApp from './Routes'
+import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Wiki />
+    <BrowserRouter>
+      <RoutesApp />
+    </BrowserRouter>
   </React.StrictMode>,
 )

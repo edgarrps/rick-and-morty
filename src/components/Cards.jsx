@@ -1,7 +1,9 @@
-export default function Cards({ results }) {
+import { Link } from "react-router-dom"
+
+export default function Cards({ results, pageNumber }) {
     let display
     results ? display = results.map(result => {
-        const { id, name, image, gender, origin, status } = result
+    const { id, name, image, gender, origin, status } = result
         const statusPtBr =
             (status === 'Alive' && gender === 'Female') ? 'Viva' :
                 (status === 'Alive' && gender === 'Male') ? 'Vivo' :
@@ -14,7 +16,7 @@ export default function Cards({ results }) {
                                             'Desconhecido'
 
         return (
-            <div key={id}>
+            <Link to={`${id}`} key={id}>        
                 <div className='pb-10'>
                     <div className='grid grid-cols-2 h-[133.25px] w-[303.34px] hover:shadow-2xl rounded-l-sm rounded-r-full hover:scale-105 hover:shadow-slate-100/30'>
                         <div className='relative'>
@@ -28,7 +30,7 @@ export default function Cards({ results }) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         )
     }) : display =<div className='text-2xl text-center text-white'>Personagem não encontrado</div>
 

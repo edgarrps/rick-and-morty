@@ -3,7 +3,7 @@ import Cards from '../components/Cards'
 // import Filters from '../components/Filters'
 import Pagination from '../components/Pagination'
 import Search from '../components/Search'
-import Api from '../services/Api.jsx'
+import ApiChars from '../services/ApiChars.jsx'
 
 export default function Wiki() {
   const api = 'https://rickandmortyapi.com/api'
@@ -15,17 +15,17 @@ export default function Wiki() {
   return (
     <div>
       <nav className='w-screen h-[50px] fixed z-50 bg-cyan-500 shadow-xl'>
-        <h1 className='font-bold text-3xl text-center text-white sm:place-self-center'>Rick and Morty<span className='text-blue-700'> Wiki</span></h1>
+        <h1 className='font-bold text-3xl text-center text-white sm:place-self-center'>Rick and Morty<span className='text-blue-700'> Chars</span></h1>
       </nav>
 
       <div className='flex justify-center'>
-        <Api api={api} pageNumber={pageNumber} search={search} chars={chars} setChars={setChars} />
+        <ApiChars api={api} pageNumber={pageNumber} search={search} chars={chars} setChars={setChars} />
         <div className='container'>
           <Search setSearch={setSearch}/>
           <div className='row'>
             {/* <Filters /> */}
             <div className='grid xl:grid-cols-3 md:grid-cols-2 md:pr-1 sm:grid-cols place-items-center pt-10'>
-              <Cards results={results} />
+              <Cards page='/' pageNumber={pageNumber} results={results} />
             </div>
             <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber}/>
           </div>
